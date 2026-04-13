@@ -3,110 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio | Data Science</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JIANG Yingying - Personal Job-Seeking Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #fdf2f8; 
+            color: #333;
+            line-height: 1.7;
+        }
+        nav {
+            background-color: #e88ba1; 
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            box-shadow: 0 2px 8px rgba(232, 139, 161, 0.2);
+        }
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #d56a83; 
+        }
+        section {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            border-bottom: 3px solid #f0a5b6; 
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0a5b6; 
+            margin: 0 auto 1.5rem;
+            display: block;
+            box-shadow: 0 0 15px rgba(240, 165, 182, 0.3);
+        }
+        .home-box {
+            text-align: center;
+        }
+        .tag-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 1rem 0;
+            justify-content: center;
+        }
+        .tag {
+            background: #fdf2f8;
+            color: #e88ba1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 1px solid #f0a5b6;
+        }
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .project-card {
+            border-left: 4px solid #f0a5b6;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            background: #fdfafb;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .info-line {
+            margin: 0.5rem 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #e88ba1;
+            color: white;
+            padding: 0.8rem 1.6rem;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background: #d56a83;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-<!-- 导航栏 -->
-<nav class="bg-blue-900 text-white p-4 sticky top-0 shadow-md">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-        <h1 class="text-xl font-bold">My Portfolio</h1>
-        <div class="space-x-4">
-            <a href="#home" class="hover:underline">Home</a>
-            <a href="#about" class="hover:underline">About</a>
-            <a href="#skills" class="hover:underline">Skills</a>
-            <a href="#projects" class="hover:underline">Projects</a>
-            <a href="#resume" class="hover:underline">Resume</a>
-            <a href="#contact" class="hover:underline">Contact</a>
-        </div>
+<nav>
+    <div class="nav-container">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
     </div>
 </nav>
 
-<!-- 首页区域 -->
-<section id="home" class="py-20 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-4">Data Science & Analytics Portfolio</h2>
-        <p class="text-lg text-gray-600">Seeking a Data Analyst / Data Science Intern position to deliver data-driven solutions.</p>
-    </div>
-</section>
-
-<!-- 关于我 -->
-<section id="about" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-2xl font-bold mb-6 text-blue-900">About Me</h3>
-        <p class="mb-4">I am a data-focused student passionate about turning raw data into clear, actionable business insights.</p>
-        <ul class="list-disc pl-6 text-gray-700">
-            <li>Strong data processing & machine learning skills</li>
-            <li>Experience in NLP, classification tasks, and visualization</li>
-            <li>Detail-oriented, self-driven, and team collaborative</li>
-        </ul>
-        <div class="mt-6">
-            <p class="font-semibold">Education:</p>
-            <p>[Your University] — [Major] | Expected 2027</p>
-        </div>
-    </div>
-</section>
-
-<!-- 技能 -->
-<section id="skills" class="py-16 bg-gray-100">
-    <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-2xl font-bold mb-6 text-blue-900">Skills</h3>
-        <div class="grid md:grid-col-2 gap-6">
-            <div>
-                <h4 class="font-semibold mb-2">Technical Skills</h4>
-                <p>Python, SQL, Data Cleaning, Machine Learning, NLP, Data Visualization</p>
-            </div>
-            <div>
-                <h4 class="font-semibold mb-2">Tools & Frameworks</h4>
-                <p>Pandas, Scikit-learn, Matplotlib, PyTorch, Git, Jupyter, Tableau</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 项目（核心：虚假新闻检测） -->
-<section id="projects" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-2xl font-bold mb-6 text-blue-900">Projects</h3>
+<!-- 1. Home -->
+<section id="home">
+    <div class="home-box">
+        <img src="大头贴.jpg" alt="JIANG Yingying" class="profile-img">
         
-        <div class="border p-6 rounded-lg shadow-sm mb-6">
-            <h4 class="font-bold text-xl mb-2">Fake News Detection Using Machine Learning & Deep Learning</h4>
-            <p class="text-gray-600 mb-3">Apr 2026</p>
-            <ul class="list-disc pl-6 space-y-1 text-gray-700">
-                <li>Built classification models to identify real vs fake news</li>
-                <li>Compared LR, NB, Random Forest, MLP, DistilBERT</li>
-                <li>Dataset: 40,000 labeled news articles</li>
-                <li>Best model: PyTorch MLP with 95% accuracy & F1-score</li>
-                <li>Optimized batch size, learning rate, and loss function</li>
-            </ul>
-            <a href="#" class="text-blue-600 hover:underline mt-3 inline-block">View Code →</a>
+        <h1>JIANG Yingying</h1>
+        <p><b>Seeking Data Science / Data Analysis / Network Engineering Related Internship</b></p>
+        <p>Master’s student in Data Science | Network Engineering Background | Skilled in Python, SQL, Java, Data Analysis</p>
+        
+        <div class="tag-box">
+            <span class="tag">Data Science</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Java</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Network Engineering</span>
         </div>
     </div>
 </section>
 
-<!-- 简历 -->
-<section id="resume" class="py-16 bg-gray-100 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-2xl font-bold mb-6 text-blue-900">Resume</h3>
-        <a href="resume.pdf" class="bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-800">Download My Resume (PDF)</a>
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a graduate with a bachelor’s degree in Network Engineering and currently studying Data Science at Lingnan University. I have strong technical foundations in databases, algorithms, data structures, and programming. I am passionate about technology, innovation, and data-driven problem-solving.</p>
+    <p>I enjoy teamwork and am eager to contribute my skills in data analysis, software development, and project execution to impactful roles.</p>
+
+    <h3>Education</h3>
+    <ul>
+        <li><b>Lingnan University</b> (Sep 2025 – now)
+            <br>Master of Science in Data Science
+            <br>Modules: Statistics, Python, Database Management, Data Mining</li>
+        <li><b>Zhuhai College of Science and Technology</b> (Sep 2021 – Jun 2025)
+            <br>Bachelor of Network Engineering
+            <br>Weighted Average: 80 | IELTS: 6.5</li>
+    </ul>
+
+    <h3>Strengths</h3>
+    <ul>
+        <li>Strong programming & database foundation</li>
+        <li>Data analysis & practical project experience</li>
+        <li>Good communication, teamwork & leadership</li>
+        <li>Self-driven, responsible and quick learner</li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <h3>Technical Skills</h3>
+    <ul>
+        <li>Python, R (Data Analysis)</li>
+        <li>SQL, Database Management</li>
+        <li>Java, Java Web, C++, C#</li>
+        <li>Algorithms, Data Structures</li>
+        <li>Network Engineering Basics</li>
+    </ul>
+
+    <h3>Business & Soft Skills</h3>
+    <ul>
+        <li>Data analysis & performance tracking</li>
+        <li>Project coordination & team management</li>
+        <li>Reporting & problem-solving</li>
+        <li>Client support & maintenance</li>
+    </ul>
+
+    <h3>Languages & Tools</h3>
+    <ul>
+        <li>Chinese (Native: Cantonese & Mandarin)</li>
+        <li>English (Fluent)</li>
+        <li>MS Office (Proficient)</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects & Experience</h2>
+
+    <div class="project-card">
+        <h3>Campaign Data Analysis & Performance Tracking</h3>
+        <p><b>Time:</b> Jul 2024 – Jul 2025</p>
+        <p><b>Problem:</b> Monitor advertising campaign effectiveness and improve event attendance.</p>
+        <p><b>Data:</b> Campaign performance data, user participation & attendance records.</p>
+        <p><b>Approach:</b> Data analysis, tracking, reporting and insight delivery.</p>
+        <p><b>Outcome:</b> Supported data-driven decisions to boost campaign performance.</p>
+        <p><b>My Contribution:</b> Full data monitoring & analysis work.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Software & Hardware Installation & Maintenance</h3>
+        <p><b>Time:</b> Jul 2023 – Aug 2023</p>
+        <p><b>Problem:</b> Provide secure device setup and technical support for clients.</p>
+        <p><b>Approach:</b> System installation, code & hardware maintenance, troubleshooting.</p>
+        <p><b>Outcome:</b> Stable device operation & improved client experience.</p>
+        <p><b>My Contribution:</b> On-site installation & maintenance support.</p>
     </div>
 </section>
 
-<!-- 联系 -->
-<section id="contact" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-        <h3 class="text-2xl font-bold mb-6 text-blue-900">Contact</h3>
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourusername</p>
-    </div>
+<section id="resume">
+    <h2>Resume</h2>
+    <p>Click below to download my full CV:</p>
+    <a href="Jiang_Yingying_CV.docx" class="btn" download>Download CV (DOCX)</a>
+    <br><br>
+    <a href="Jiang_Yingying_CV.docx" class="btn" target="_blank">Open CV in Browser</a>
+    <h3>CV Brief</h3>
+    <ul>
+        <li>Education: Network Engineering (Bachelor), Data Science (Master)</li>
+        <li>Internships: Media data analysis, tech support, tutoring</li>
+        <li>Leadership: Volunteer Campaign Vice Chair, Party Volunteering Union Chair</li>
+        <li>Skills: Python, SQL, Java, R, MS Office, Data Analysis</li>
+    </ul>
 </section>
 
-<!-- 页脚 -->
-<footer class="bg-blue-900 text-white text-center p-4">
-    <p class="text-sm">© 2026 My Portfolio | All Rights Reserved</p>
-</footer>
+<section id="contact">
+    <h2>Contact</h2>
+    <p><b>Name:</b> JIANG Yingying</p>
+    <p><b>Mobile:</b> +852 69420331</p>
+    <p><b>Email:</b> yingyingjiang2024@gmail.com</p>
+</section>
 
 </body>
 </html>
